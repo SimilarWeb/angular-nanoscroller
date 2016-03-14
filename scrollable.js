@@ -74,8 +74,11 @@
                 $nanoElement.on('update', function(event, vals){
                   scope.$emit(elementId + 'ScrollPositionChanged', vals.position);
                   //console.log("pos=" + vals.position + ", direction=" + vals.direction + "\n" );
-                  var nsEvent = new Event('nanoscroll');
-                  document.dispatchEvent(nsEvent);
+                  try {
+                    // not supported in IE
+                    var nsEvent = new Event('nanoscroll');
+                    document.dispatchEvent(nsEvent);
+                  } catch(e) {}
                 });
                 // Listens to scrollTo event (values: 'top', 'bottom' or integer)
                 scope.$on(elementId + 'ScrollTo', function(event, val) {
