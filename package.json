@@ -1,0 +1,12 @@
+{
+  "name": "sw-angular-nanoscroller",
+  "version": "1.0.0",
+  "description": "highcharts-ng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/similarweb/angular-nanoscroller.git"
+  },
+  "license": "MIT",  
+  "main": "./index.js",
+  "dependencies": {}
+}
